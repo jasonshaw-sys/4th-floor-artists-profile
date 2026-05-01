@@ -20,11 +20,14 @@ export default function Home() {
     setLoading(true)
 
     if (isSignUp) {
-      const { error } = await supabase.auth.signUp({ email, password })
+      const { data, error } = await supabase.auth.signUp({ email, password })
       if (error) setError(error.message)
-      else {
-        setMessage('Account created successfully!')
+      else if (data.session) {
+        // Email confirmation is off - user is logged in immediately
         router.push('/profile')
+      } else {
+        // Email confirmation is on - user needs to confirm
+        setMessage('Check your email to confirm your account!')
       }
     } else {
       const { data, error } = await supabase.auth.signInWithPassword({ email, password })
