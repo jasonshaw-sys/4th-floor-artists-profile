@@ -103,12 +103,8 @@ export default function Profile() {
             <p className="text-red-600 text-xs mt-0.5">Renew your membership to stay active</p>
           </div>
           
-            href="https://www.4thfloorartists.com/shop/4th-floor-artists-membership"
-            target="_blank"
-            className="bg-red-600 text-white text-xs px-4 py-2 rounded-lg font-medium hover:bg-red-700"
-          >
-            Renew Now
-          </a>
+            <a href="https://www.4thfloorartists.com/shop/4th-floor-artists-membership"
+            target="_blank" className="bg-red-600 text-white text-xs px-4 py-2 rounded-lg font-medium hover:bg-red-700">Renew Now</a>
         </div>
       )
     }
@@ -119,10 +115,9 @@ export default function Profile() {
           <p className="text-yellow-600 text-xs mt-0.5">Purchase a membership to become an active member</p>
         </div>
         
-          href="https://www.4thfloorartists.com/shop/4th-floor-artists-membership"
+          <a href="https://www.4thfloorartists.com/shop/4th-floor-artists-membership"
           target="_blank"
-          className="bg-black text-white text-xs px-4 py-2 rounded-lg font-medium hover:bg-gray-800"
-        >
+          className="bg-black text-white text-xs px-4 py-2 rounded-lg font-medium hover:bg-gray-800">
           Buy Membership
         </a>
       </div>
