@@ -80,7 +80,7 @@ export default function Profile() {
   const handleSignOut = async () => {
     await supabase.auth.signOut()
     router.push('/')
-  }
+  } 
 
   if (loading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>
 
