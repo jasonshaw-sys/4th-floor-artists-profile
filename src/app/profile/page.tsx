@@ -38,7 +38,11 @@ export default function Profile() {
         .eq('id', user.id)
         .single()
 
-      if (data) setProfile(data)
+      //if (data) setProfile(data)
+      if (data) {
+        console.log('Profile data:', data)
+        setProfile(data)
+      }
       setLoading(false)
     }
     getProfile()
