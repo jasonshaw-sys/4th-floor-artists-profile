@@ -16,7 +16,7 @@ export default function Reset() {
     if (!email.trim()) { setError('Please enter your email.'); return }
     setLoading(true)
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/update-password`
+      redirectTo: \`\${window.location.origin}/update-password\`
     })
     if (error) setError(error.message)
     else setMessage('Check your email for a password reset link!')
@@ -28,12 +28,10 @@ export default function Reset() {
       <div className="bg-white rounded-2xl shadow-md p-8 w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-2">Reset Password</h1>
         <p className="text-center text-gray-500 text-sm mb-6">
-          Enter your email and we'll send you a reset link.
+          Enter your email and we will send you a reset link.
         </p>
-
         {message && <p className="text-green-500 text-sm mb-4">{message}</p>}
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-
         <div className="space-y-4">
           <input
             type="email"
@@ -50,7 +48,6 @@ export default function Reset() {
             {loading ? 'Sending...' : 'Send Reset Link'}
           </button>
         </div>
-
         <p className="text-center text-sm text-gray-500 mt-4">
           <a href="/" className="text-black font-medium underline">Back to Sign In</a>
         </p>
